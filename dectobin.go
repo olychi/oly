@@ -1,16 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 func main() {
 	fmt.Println("Convert Number to Binary. Let GO!!!")
 
-	var numb int64
+	var numb int
 	fmt.Printf("Please enter a number: ")
 	fmt.Scanln(&numb)
 
-	fmt.Println(strconv.FormatInt(numb, 2))
+	fmt.Printf("The binary number of %d is: %b", numb, numb)
 }
