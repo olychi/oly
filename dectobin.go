@@ -8,6 +8,5 @@ func main() {
 	var numb int
 	fmt.Printf("Please enter a number: ")
 	fmt.Scanln(&numb)
-
 	fmt.Printf("The binary number of %d is: %b", numb, numb)
 }
