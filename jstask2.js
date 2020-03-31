@@ -5,24 +5,24 @@ let principalTimeArr = [
     {'principal': 3000, 'time': 3}
 ]
 
+let interestData = [];
 function calculateInterest(principal, rate, time) {
     let interest = (principal * rate * time)/100
-    return interest;
+    interestData.push({'principal': principal, 'rate': rate, 'time': time, 'interest': interest});
+    console.log(interestData)
+    return interestData;
 }
 
 let rate = '';
 principalTimeArr.forEach(element => {
     if(element.principal >= 2500 && (element.time > 1 && element.time <= 3)) {
         rate = 3;
-        console.log(calculateInterest(element.principal, rate, element.time))
     } else if(element.principal >= 2500 && element.time >= 3) {
         rate = 4;
-        console.log(calculateInterest(element.principal, rate, element.time))
     } else if (element.principal < 2500 || element.time <= 1) {
         rate = 2;
-        console.log(calculateInterest(element.principal, rate, element.time))
     } else {
-        rate = 1;
-        console.log(calculateInterest(element.principal, rate, element.time))
+        rate = 1;  
     }
+    calculateInterest(element.principal, rate, element.time)
 });
