@@ -6,7 +6,7 @@ let principalTimeArr = [
 ]
 
 let interestData = [];
-let rate = '';
+let rate;
 
 function calculateInterest(arr) {
     arr.forEach(element => {
