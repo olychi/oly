@@ -10,9 +10,9 @@ let rate;
 
 function calculateInterest(arr) {
     arr.forEach(element => {
-        if(element.principal >= 2500 && (element.time > 1 && element.time <= 3)) {
+        if (element.principal >= 2500 && (element.time > 1 && element.time <= 3)) {
             rate = 3;
-        } else if(element.principal >= 2500 && element.time >= 3) {
+        } else if (element.principal >= 2500 && element.time >= 3) {
             rate = 4;
         } else if (element.principal < 2500 || element.time <= 1) {
             rate = 2;
